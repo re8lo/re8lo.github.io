@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Construção</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(270deg, #1a1a2e, #16213e, #0f3460);
+            background-size: 600% 600%;
+            animation: gradient 15s ease infinite;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .container {
+            padding: 20px;
+            animation: fadeIn 2s ease forwards, pulse 2s infinite 2s;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: #ccc;
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* Rodapé */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .contact {
+            margin-bottom: 10px;
+        }
+
+        .contact span {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .whatsapp-icon {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        .qr-code {
+            margin-top: 10px;
+        }
+
+        .qr-code img {
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            background: #fff;
+            padding: 5px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-7px);}
+        }
+
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.03);}
+            100% {transform: scale(1);}
+        }
+
+        @media (max-width: 600px) {
+            h1 {font-size: 2.2rem;}
+            p {font-size: 1rem;}
+            .icon {font-size: 3rem;}
+            footer {font-size: 0.9rem;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🚧</div>
+        <h1>EM CONSTRUÇÃO</h1>
+        <p>Nosso site estará disponível em breve. Fique atento às novidades!</p>
+    </div>
+
+    <footer>
+        <div class="contact">
+            <span>📞 (21) 3269-6575</span> |
+            <span>
+                <a href="https://wa.me/5521975393782" target="_blank" style="color: #25D366; text-decoration: none;">
+                    📱 (21) 97539-3782
+                    <img class="whatsapp-icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                </a>
+            </span>
+        </div>
+        <div class="address">
+            Nossa Loja: Rua Paranapanema, 357 - OLARIA
+        </div>
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/5521975393782" alt="QR Code WhatsApp">
+        </div>
+    </footer>
+</body>
+</html>
