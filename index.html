@@ -17,7 +17,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             background: linear-gradient(270deg, #1a1a2e, #16213e, #0f3460);
             background-size: 600% 600%;
@@ -33,9 +33,26 @@
             100% {background-position: 0% 50%;}
         }
 
-        .container {
-            padding: 20px;
-            animation: fadeIn 2s ease forwards, pulse 2s infinite 2s;
+        /* Banner */
+        .banner {
+            width: 100%;
+            background: #fff;
+        }
+
+        .banner img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        .subtitulo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #ffd54f;
         }
 
         h1 {
@@ -46,13 +63,7 @@
         p {
             font-size: 1.3rem;
             color: #ccc;
-        }
-
-        .icon {
-            font-size: 4rem;
             margin-bottom: 20px;
-            display: inline-block;
-            animation: bounce 1.5s infinite;
         }
 
         /* Rodapé */
@@ -66,12 +77,19 @@
         }
 
         .contact {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .contact span {
             display: inline-block;
             margin: 0 10px;
+        }
+
+        .email {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.95rem;
+            color: #fff;
         }
 
         .whatsapp-icon {
@@ -93,37 +111,24 @@
             padding: 5px;
         }
 
-        @keyframes fadeIn {
-            from {opacity: 0; transform: translateY(20px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-15px);}
-            60% {transform: translateY(-7px);}
-        }
-
-        @keyframes pulse {
-            0% {transform: scale(1);}
-            50% {transform: scale(1.03);}
-            100% {transform: scale(1);}
-        }
-
         @media (max-width: 600px) {
             h1 {font-size: 2.2rem;}
             p {font-size: 1rem;}
-            .icon {font-size: 3rem;}
+            .subtitulo {font-size: 1.2rem;}
             footer {font-size: 0.9rem;}
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="icon">🚧</div>
-        <h1>EM CONSTRUÇÃO</h1>
-        <p>Nosso site estará disponível em breve. Fique atento às novidades!</p>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="banner.png" alt="C5 Digital Banner">
     </div>
+
+    <div class="subtitulo">Informática e Manutenção</div>
+
+    <h1>EM CONSTRUÇÃO</h1>
+    <p>Nosso site estará disponível em breve. Fique atento às novidades!</p>
 
     <footer>
         <div class="contact">
@@ -134,9 +139,10 @@
                     <img class="whatsapp-icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
                 </a>
             </span>
+            <span class="email">✉ contato@c5digital.com.br</span>
         </div>
         <div class="address">
-            Nossa Loja: Rua Paranapanema, 357 - OLARIA
+            Em Breve Nossa Loja na Rua Paranapanema, 357 - OLARIA
         </div>
         <div class="qr-code">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/5521975393782" alt="QR Code WhatsApp">
